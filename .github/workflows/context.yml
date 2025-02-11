@@ -4,4 +4,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "{{ github.actor }} is running this workflow"
+      - run: echo "${{ github.actor }} is running this workflow"
+      - run: echo "The event type is ${GITHUB_EVENT_NAME}"
+      - run: echo "The event payload is ${GITHUB_EVENT_PATH}"
+      - run: echo "The workflow is running in the ${GITHUB_WORKFLOW} workflow"
+      - run: echo "The workflow is running in the ${GITHUB_WORKSPACE} workspace"
+      - run: echo "The workflow is running in the ${GITHUB_RUN_ID} run ID"
