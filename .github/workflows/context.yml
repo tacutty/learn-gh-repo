@@ -1,0 +1,7 @@
+name: Contexts
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "{{ github.actor }} is running this workflow"
